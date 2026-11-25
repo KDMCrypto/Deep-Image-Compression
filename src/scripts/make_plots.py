@@ -1,4 +1,8 @@
-"""Build rate-distortion plots and a matched-BPP table for DiT-IC vs JPEG/WebP."""
+"""Build rate-distortion plots and a matched-BPP table for DiT-IC vs JPEG/WebP.
+
+When src/result/metrics/pulse_kodak_summary.csv exists (src/scripts/run_pulse.py),
+the four PULSE models are added to the rate-distortion plots as QP curves.
+"""
 
 from __future__ import annotations
 
@@ -34,6 +38,15 @@ STYLES = {
     "jpeg": dict(color="#d95f02", marker="o", label="JPEG"),
     "webp": dict(color="#1b9e77", marker="s", label="WebP"),
 }
+
+# PULSE bundles from src/scripts/run_pulse.py; dashed lines, one point per QP 0..7.
+PULSE_STYLES = {
+    "pulse-s-mse": dict(color="#1f78b4", marker="v", label="PULSE-S MSE"),
+    "pulse-mse": dict(color="#33a02c", marker="^", label="PULSE MSE"),
+    "pulse-perceptual": dict(color="#e7298a", marker="D", label="PULSE perceptual"),
+    "pulse-l-perceptual": dict(color="#6a3d9a", marker="P", label="PULSE-L perceptual"),
+}
+PULSE_SUMMARY = METRICS_DIR / "pulse_kodak_summary.csv"
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -71,12 +84,34 @@ def main() -> None:
         for codec in ("jpeg", "webp")
     }
 
+    # PULSE is optional: the plots still build when run_pulse.py has not run.
+    pulse_rows = {}
+    if PULSE_SUMMARY.exists():
+        all_pulse = read_csv(PULSE_SUMMARY)
+        pulse_rows = {
+            model: sorted((r for r in all_pulse if r["codec"] == model), key=lambda r: int(r["qp"]))
+            for model in PULSE_STYLES
+        }
+        pulse_rows = {model: rows for model, rows in pulse_rows.items() if rows}
+    pulse_min_bpp = min((float(r["bpp"]) for rows in pulse_rows.values() for r in rows), default=0.0)
+
     # ---- Rate-distortion plots -------------------------------------------
     for metric, (label, higher_is_better) in METRIC_LABELS.items():
         fig, ax = plt.subplots(figsize=(6.4, 4.4))
         for codec, rows in codec_rows.items():
             bpp, values = pareto_curve(rows, metric, higher_is_better)
             ax.plot(bpp, values, linewidth=1.8, markersize=4, **STYLES[codec])
+        # PULSE has one learned operating point per QP, so its real QP curve is
+        # drawn, not a Pareto envelope over many settings like JPEG/WebP.
+        for model, rows in pulse_rows.items():
+            ax.plot(
+                [float(r["bpp"]) for r in rows],
+                [float(r[metric]) for r in rows],
+                linewidth=1.4,
+                linestyle="--",
+                markersize=4,
+                **PULSE_STYLES[model],
+            )
         ax.scatter(
             [dit_bpp],
             [dit_metrics[metric]],
@@ -90,9 +125,19 @@ def main() -> None:
         ax.set_ylabel(label)
         ax.set_xscale("log")
         ax.grid(True, alpha=0.3)
-        ax.legend()
+        ax.legend(fontsize=7 if pulse_rows else None)
         ax.set_title(f"Kodak: {label} vs bitrate")
-        fig.tight_layout()
+        if pulse_rows:
+            # The two kinds of curves are built differently; say so on the figure.
+            fig.text(
+                0.01,
+                0.01,
+                "JPEG/WebP: best tested (scale, quality) per bitrate for this metric. "
+                f"PULSE: measured QP points, lowest rate {pulse_min_bpp:.3f} bpp.",
+                fontsize=6,
+                color="#555555",
+            )
+        fig.tight_layout(rect=(0, 0.03, 1, 1) if pulse_rows else None)
         fig.savefig(FIGURES_DIR / f"rd_{metric}.png", dpi=160)
         plt.close(fig)
 

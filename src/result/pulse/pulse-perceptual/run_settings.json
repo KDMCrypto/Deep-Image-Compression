@@ -1,0 +1,39 @@
+{
+  "images": [
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+    "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png"
+  ],
+  "qps": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "device": "cuda:0"
+}

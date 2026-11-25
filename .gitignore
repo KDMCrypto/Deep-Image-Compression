@@ -16,3 +16,6 @@ src/result/baselines/**/encoded/
 # Logs
 src/result/logs/
 *.log
+
+# PULSE reconstructions (one PNG per image, model and QP)
+src/result/pulse/**/rec/

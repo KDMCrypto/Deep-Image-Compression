@@ -1,0 +1,1990 @@
+{
+  "model": "/home/bigfly/projects/Deep-Image-Compression/checkpoints/pulse-perceptual",
+  "rate": "actual .pulse file bytes including header",
+  "y_cdf_mode": "part_specific",
+  "skip_index_cutoff": 2,
+  "meta_prior_coding": "index_merge",
+  "container": "PLS1",
+  "fid_patch": null,
+  "fid_offsets": null,
+  "summary": {
+    "0": {
+      "bpp": 0.2821061876085069,
+      "psnr": 29.431875944137573,
+      "encode_ms": 129.2103004961973,
+      "decode_ms": 48.96048013082085,
+      "pixel_weighted_bpp": 0.2821061876085069
+    },
+    "1": {
+      "bpp": 0.33760325113932294,
+      "psnr": 30.132972697416943,
+      "encode_ms": 104.79122865945101,
+      "decode_ms": 51.40936658669185,
+      "pixel_weighted_bpp": 0.33760325113932294
+    },
+    "2": {
+      "bpp": 0.4096544053819444,
+      "psnr": 30.936131179332733,
+      "encode_ms": 80.8701782055626,
+      "decode_ms": 44.18287700536894,
+      "pixel_weighted_bpp": 0.4096544053819444
+    },
+    "3": {
+      "bpp": 0.4930063883463542,
+      "psnr": 31.737225353717804,
+      "encode_ms": 92.81735346060789,
+      "decode_ms": 48.115837298003804,
+      "pixel_weighted_bpp": 0.4930063883463542
+    },
+    "4": {
+      "bpp": 0.5857967800564237,
+      "psnr": 32.51404672861099,
+      "encode_ms": 102.25517075499131,
+      "decode_ms": 53.783605915668886,
+      "pixel_weighted_bpp": 0.5857967800564237
+    },
+    "5": {
+      "bpp": 0.6925014919704862,
+      "psnr": 33.292374312877655,
+      "encode_ms": 93.74135657708393,
+      "decode_ms": 49.381848674480956,
+      "pixel_weighted_bpp": 0.6925014919704862
+    },
+    "6": {
+      "bpp": 0.8140920003255209,
+      "psnr": 34.045433700084686,
+      "encode_ms": 72.95276950026164,
+      "decode_ms": 35.58091941522434,
+      "pixel_weighted_bpp": 0.8140920003255209
+    },
+    "7": {
+      "bpp": 0.9462890625,
+      "psnr": 34.74874357382456,
+      "encode_ms": 89.72699412697693,
+      "decode_ms": 44.49259041090651,
+      "pixel_weighted_bpp": 0.9462890625
+    }
+  },
+  "images": [
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 0,
+      "bytes": 17530,
+      "pixels": 393216,
+      "bpp": 0.3566487630208333,
+      "psnr": 26.465420722961426,
+      "encode_ms": 1320.2648279839195,
+      "decode_ms": 56.209056987427175
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 0,
+      "bytes": 9551,
+      "pixels": 393216,
+      "bpp": 0.19431559244791666,
+      "psnr": 30.53957223892212,
+      "encode_ms": 55.33090402605012,
+      "decode_ms": 51.36590398615226
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 0,
+      "bytes": 10066,
+      "pixels": 393216,
+      "bpp": 0.20479329427083334,
+      "psnr": 32.63556241989136,
+      "encode_ms": 79.47859901469201,
+      "decode_ms": 57.523074035998434
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 0,
+      "bytes": 11770,
+      "pixels": 393216,
+      "bpp": 0.23946126302083334,
+      "psnr": 30.7024884223938,
+      "encode_ms": 154.90191301796585,
+      "decode_ms": 53.148870007134974
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 0,
+      "bytes": 23323,
+      "pixels": 393216,
+      "bpp": 0.4745076497395833,
+      "psnr": 26.78474187850952,
+      "encode_ms": 72.27588997920975,
+      "decode_ms": 47.470479970797896
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 0,
+      "bytes": 13642,
+      "pixels": 393216,
+      "bpp": 0.2775472005208333,
+      "psnr": 27.852084636688232,
+      "encode_ms": 88.72590900864452,
+      "decode_ms": 40.31311301514506
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 0,
+      "bytes": 13024,
+      "pixels": 393216,
+      "bpp": 0.2649739583333333,
+      "psnr": 31.653132438659668,
+      "encode_ms": 87.81724103027955,
+      "decode_ms": 47.794985002838075
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 0,
+      "bytes": 21970,
+      "pixels": 393216,
+      "bpp": 0.4469807942708333,
+      "psnr": 26.183366775512695,
+      "encode_ms": 45.73854897171259,
+      "decode_ms": 26.094569999258965
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 0,
+      "bytes": 9711,
+      "pixels": 393216,
+      "bpp": 0.19757080078125,
+      "psnr": 31.8949294090271,
+      "encode_ms": 62.11931799771264,
+      "decode_ms": 44.33071700623259
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 0,
+      "bytes": 12498,
+      "pixels": 393216,
+      "bpp": 0.2542724609375,
+      "psnr": 32.056896686553955,
+      "encode_ms": 63.19370697019622,
+      "decode_ms": 73.33888101857156
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 0,
+      "bytes": 12872,
+      "pixels": 393216,
+      "bpp": 0.2618815104166667,
+      "psnr": 28.684308528900146,
+      "encode_ms": 62.46558198472485,
+      "decode_ms": 41.23560100561008
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 0,
+      "bytes": 10452,
+      "pixels": 393216,
+      "bpp": 0.212646484375,
+      "psnr": 31.959691047668457,
+      "encode_ms": 62.147312972228974,
+      "decode_ms": 39.00867304764688
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 0,
+      "bytes": 22461,
+      "pixels": 393216,
+      "bpp": 0.45697021484375,
+      "psnr": 24.438397884368896,
+      "encode_ms": 68.69890500092879,
+      "decode_ms": 55.41642400203273
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 0,
+      "bytes": 18955,
+      "pixels": 393216,
+      "bpp": 0.3856404622395833,
+      "psnr": 27.910077571868896,
+      "encode_ms": 56.5989320166409,
+      "decode_ms": 43.8562459894456
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 0,
+      "bytes": 10341,
+      "pixels": 393216,
+      "bpp": 0.21038818359375,
+      "psnr": 30.48691749572754,
+      "encode_ms": 78.8385039777495,
+      "decode_ms": 42.856381041929126
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 0,
+      "bytes": 9987,
+      "pixels": 393216,
+      "bpp": 0.20318603515625,
+      "psnr": 30.10870933532715,
+      "encode_ms": 33.2225919701159,
+      "decode_ms": 22.404684976208955
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 0,
+      "bytes": 12438,
+      "pixels": 393216,
+      "bpp": 0.2530517578125,
+      "psnr": 31.18614673614502,
+      "encode_ms": 84.4309710082598,
+      "decode_ms": 73.58695002039894
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 0,
+      "bytes": 17524,
+      "pixels": 393216,
+      "bpp": 0.3565266927083333,
+      "psnr": 27.31611728668213,
+      "encode_ms": 105.79188499832526,
+      "decode_ms": 62.83961597364396
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 0,
+      "bytes": 11500,
+      "pixels": 393216,
+      "bpp": 0.23396809895833334,
+      "psnr": 29.142000675201416,
+      "encode_ms": 70.48314897110686,
+      "decode_ms": 46.918296022340655
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 0,
+      "bytes": 8820,
+      "pixels": 393216,
+      "bpp": 0.179443359375,
+      "psnr": 30.93245506286621,
+      "encode_ms": 79.74421500694007,
+      "decode_ms": 42.91680303867906
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 0,
+      "bytes": 13104,
+      "pixels": 393216,
+      "bpp": 0.2666015625,
+      "psnr": 28.2150936126709,
+      "encode_ms": 74.08823998412117,
+      "decode_ms": 37.63053799048066
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 0,
+      "bytes": 13023,
+      "pixels": 393216,
+      "bpp": 0.26495361328125,
+      "psnr": 28.72878074645996,
+      "encode_ms": 114.1772199771367,
+      "decode_ms": 52.547444007359445
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 0,
+      "bytes": 8966,
+      "pixels": 393216,
+      "bpp": 0.18241373697916666,
+      "psnr": 33.09876203536987,
+      "encode_ms": 97.38561802078038,
+      "decode_ms": 47.72464500274509
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 0,
+      "bytes": 19258,
+      "pixels": 393216,
+      "bpp": 0.3918050130208333,
+      "psnr": 27.389369010925293,
+      "encode_ms": 83.1272280192934,
+      "decode_ms": 68.51956999162212
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 1,
+      "bytes": 21629,
+      "pixels": 393216,
+      "bpp": 0.4400431315104167,
+      "psnr": 27.282803058624268,
+      "encode_ms": 122.4601129652001,
+      "decode_ms": 56.06647202512249
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 1,
+      "bytes": 11799,
+      "pixels": 393216,
+      "bpp": 0.24005126953125,
+      "psnr": 31.103906631469727,
+      "encode_ms": 102.0063369651325,
+      "decode_ms": 47.345633036457
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 1,
+      "bytes": 11797,
+      "pixels": 393216,
+      "bpp": 0.24001057942708334,
+      "psnr": 33.334834575653076,
+      "encode_ms": 190.32616197364405,
+      "decode_ms": 81.3803980126977
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 1,
+      "bytes": 14166,
+      "pixels": 393216,
+      "bpp": 0.2882080078125,
+      "psnr": 31.362006664276123,
+      "encode_ms": 142.49880198622122,
+      "decode_ms": 49.22774602891877
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 1,
+      "bytes": 27446,
+      "pixels": 393216,
+      "bpp": 0.5583902994791666,
+      "psnr": 27.603280544281006,
+      "encode_ms": 113.11540403403342,
+      "decode_ms": 49.24426501384005
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 1,
+      "bytes": 16696,
+      "pixels": 393216,
+      "bpp": 0.3396809895833333,
+      "psnr": 28.620126247406006,
+      "encode_ms": 157.95212698867545,
+      "decode_ms": 79.30142898112535
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 1,
+      "bytes": 14949,
+      "pixels": 393216,
+      "bpp": 0.30413818359375,
+      "psnr": 32.342097759246826,
+      "encode_ms": 105.34672695212066,
+      "decode_ms": 41.95617401273921
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 1,
+      "bytes": 25706,
+      "pixels": 393216,
+      "bpp": 0.5229899088541666,
+      "psnr": 26.89028024673462,
+      "encode_ms": 119.46524301311001,
+      "decode_ms": 53.57215600088239
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 1,
+      "bytes": 11369,
+      "pixels": 393216,
+      "bpp": 0.23130289713541666,
+      "psnr": 32.56559610366821,
+      "encode_ms": 109.50413899263367,
+      "decode_ms": 43.286788975819945
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 1,
+      "bytes": 14348,
+      "pixels": 393216,
+      "bpp": 0.2919108072916667,
+      "psnr": 32.70319938659668,
+      "encode_ms": 82.81268895370886,
+      "decode_ms": 45.8861660445109
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 1,
+      "bytes": 15684,
+      "pixels": 393216,
+      "bpp": 0.319091796875,
+      "psnr": 29.397141933441162,
+      "encode_ms": 68.09023901587352,
+      "decode_ms": 33.084546972531825
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 1,
+      "bytes": 12377,
+      "pixels": 393216,
+      "bpp": 0.2518107096354167,
+      "psnr": 32.58061408996582,
+      "encode_ms": 104.39887398388237,
+      "decode_ms": 69.13159601390362
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 1,
+      "bytes": 27772,
+      "pixels": 393216,
+      "bpp": 0.5650227864583334,
+      "psnr": 25.255353450775146,
+      "encode_ms": 78.36997305275872,
+      "decode_ms": 43.408026976976544
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 1,
+      "bytes": 22828,
+      "pixels": 393216,
+      "bpp": 0.4644368489583333,
+      "psnr": 28.702049255371094,
+      "encode_ms": 76.14418701268733,
+      "decode_ms": 36.74624999985099
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 1,
+      "bytes": 12193,
+      "pixels": 393216,
+      "bpp": 0.24806722005208334,
+      "psnr": 31.095280647277832,
+      "encode_ms": 103.63740503089502,
+      "decode_ms": 49.877029028721154
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 1,
+      "bytes": 12318,
+      "pixels": 393216,
+      "bpp": 0.2506103515625,
+      "psnr": 30.864787101745605,
+      "encode_ms": 133.09079001192003,
+      "decode_ms": 54.09359000623226
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 1,
+      "bytes": 14664,
+      "pixels": 393216,
+      "bpp": 0.29833984375,
+      "psnr": 31.872472763061523,
+      "encode_ms": 123.68316302308813,
+      "decode_ms": 75.43399400310591
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 1,
+      "bytes": 21066,
+      "pixels": 393216,
+      "bpp": 0.4285888671875,
+      "psnr": 28.082778453826904,
+      "encode_ms": 81.55701198847964,
+      "decode_ms": 42.3307649907656
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 1,
+      "bytes": 13837,
+      "pixels": 393216,
+      "bpp": 0.2815144856770833,
+      "psnr": 29.744508266448975,
+      "encode_ms": 91.43338701687753,
+      "decode_ms": 46.31703899940476
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 1,
+      "bytes": 10503,
+      "pixels": 393216,
+      "bpp": 0.21368408203125,
+      "psnr": 31.521453857421875,
+      "encode_ms": 69.41926298895851,
+      "decode_ms": 49.37794798752293
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 1,
+      "bytes": 15759,
+      "pixels": 393216,
+      "bpp": 0.32061767578125,
+      "psnr": 29.013755321502686,
+      "encode_ms": 87.20249397447333,
+      "decode_ms": 64.8446929990314
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 1,
+      "bytes": 16050,
+      "pixels": 393216,
+      "bpp": 0.3265380859375,
+      "psnr": 29.43077802658081,
+      "encode_ms": 75.95332397613674,
+      "decode_ms": 47.79312602477148
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 1,
+      "bytes": 10466,
+      "pixels": 393216,
+      "bpp": 0.21293131510416666,
+      "psnr": 33.68380069732666,
+      "encode_ms": 108.10557997319847,
+      "decode_ms": 48.22107596555725
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 1,
+      "bytes": 22831,
+      "pixels": 393216,
+      "bpp": 0.4644978841145833,
+      "psnr": 28.138439655303955,
+      "encode_ms": 68.4160539531149,
+      "decode_ms": 25.897889980114996
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 2,
+      "bytes": 26411,
+      "pixels": 393216,
+      "bpp": 0.5373331705729166,
+      "psnr": 28.116185665130615,
+      "encode_ms": 77.50622095772997,
+      "decode_ms": 37.38956101005897
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 2,
+      "bytes": 14899,
+      "pixels": 393216,
+      "bpp": 0.3031209309895833,
+      "psnr": 31.86774253845215,
+      "encode_ms": 95.80924198962748,
+      "decode_ms": 80.39892703527585
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 2,
+      "bytes": 13941,
+      "pixels": 393216,
+      "bpp": 0.28363037109375,
+      "psnr": 34.07678842544556,
+      "encode_ms": 73.95960396388546,
+      "decode_ms": 36.70731600141153
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 2,
+      "bytes": 17521,
+      "pixels": 393216,
+      "bpp": 0.3564656575520833,
+      "psnr": 32.13627338409424,
+      "encode_ms": 63.47427301807329,
+      "decode_ms": 36.4126359927468
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 2,
+      "bytes": 32520,
+      "pixels": 393216,
+      "bpp": 0.66162109375,
+      "psnr": 28.49653959274292,
+      "encode_ms": 73.83688702248037,
+      "decode_ms": 53.47332399105653
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 2,
+      "bytes": 20837,
+      "pixels": 393216,
+      "bpp": 0.4239298502604167,
+      "psnr": 29.525399208068848,
+      "encode_ms": 105.91825196752325,
+      "decode_ms": 52.25948698353022
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 2,
+      "bytes": 17439,
+      "pixels": 393216,
+      "bpp": 0.35479736328125,
+      "psnr": 33.13873291015625,
+      "encode_ms": 67.53243098501116,
+      "decode_ms": 29.04407598543912
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 2,
+      "bytes": 30348,
+      "pixels": 393216,
+      "bpp": 0.617431640625,
+      "psnr": 27.645840644836426,
+      "encode_ms": 89.12690501892939,
+      "decode_ms": 44.609331991523504
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 2,
+      "bytes": 13494,
+      "pixels": 393216,
+      "bpp": 0.2745361328125,
+      "psnr": 33.33444118499756,
+      "encode_ms": 80.27352002682164,
+      "decode_ms": 77.99897703807801
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 2,
+      "bytes": 17025,
+      "pixels": 393216,
+      "bpp": 0.34637451171875,
+      "psnr": 33.41628074645996,
+      "encode_ms": 68.42649402096868,
+      "decode_ms": 35.39627103600651
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 2,
+      "bytes": 19101,
+      "pixels": 393216,
+      "bpp": 0.38861083984375,
+      "psnr": 30.195324420928955,
+      "encode_ms": 66.88795797526836,
+      "decode_ms": 31.124697998166084
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 2,
+      "bytes": 15021,
+      "pixels": 393216,
+      "bpp": 0.30560302734375,
+      "psnr": 33.282716274261475,
+      "encode_ms": 80.28944197576493,
+      "decode_ms": 55.731978034600616
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 2,
+      "bytes": 34322,
+      "pixels": 393216,
+      "bpp": 0.6982828776041666,
+      "psnr": 26.168313026428223,
+      "encode_ms": 111.07814300339669,
+      "decode_ms": 61.96659797569737
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 2,
+      "bytes": 27918,
+      "pixels": 393216,
+      "bpp": 0.5679931640625,
+      "psnr": 29.569876194000244,
+      "encode_ms": 88.90149800572544,
+      "decode_ms": 40.11441604234278
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 2,
+      "bytes": 14825,
+      "pixels": 393216,
+      "bpp": 0.3016153971354167,
+      "psnr": 31.825454235076904,
+      "encode_ms": 94.08616297878325,
+      "decode_ms": 42.70223499042913
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 2,
+      "bytes": 15363,
+      "pixels": 393216,
+      "bpp": 0.31256103515625,
+      "psnr": 31.722652912139893,
+      "encode_ms": 89.07130500301719,
+      "decode_ms": 40.70104396669194
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 2,
+      "bytes": 17609,
+      "pixels": 393216,
+      "bpp": 0.3582560221354167,
+      "psnr": 32.68637657165527,
+      "encode_ms": 76.71594299608842,
+      "decode_ms": 43.64778503077105
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 2,
+      "bytes": 25552,
+      "pixels": 393216,
+      "bpp": 0.5198567708333334,
+      "psnr": 28.9277982711792,
+      "encode_ms": 70.40009199408814,
+      "decode_ms": 37.85666101612151
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 2,
+      "bytes": 17293,
+      "pixels": 393216,
+      "bpp": 0.3518269856770833,
+      "psnr": 30.574097633361816,
+      "encode_ms": 70.90599101502448,
+      "decode_ms": 42.73740999633446
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 2,
+      "bytes": 12819,
+      "pixels": 393216,
+      "bpp": 0.26080322265625,
+      "psnr": 32.3217248916626,
+      "encode_ms": 71.43683999311179,
+      "decode_ms": 30.026963038835675
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 2,
+      "bytes": 19202,
+      "pixels": 393216,
+      "bpp": 0.3906656901041667,
+      "psnr": 29.918935298919678,
+      "encode_ms": 57.16985400067642,
+      "decode_ms": 28.910844994243234
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 2,
+      "bytes": 20047,
+      "pixels": 393216,
+      "bpp": 0.4078572591145833,
+      "psnr": 30.252275466918945,
+      "encode_ms": 98.77629001857713,
+      "decode_ms": 46.86799296177924
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 2,
+      "bytes": 12222,
+      "pixels": 393216,
+      "bpp": 0.2486572265625,
+      "psnr": 34.30082321166992,
+      "encode_ms": 87.22496696282178,
+      "decode_ms": 39.18362804688513
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 2,
+      "bytes": 27519,
+      "pixels": 393216,
+      "bpp": 0.55987548828125,
+      "psnr": 28.96655559539795,
+      "encode_ms": 82.0759620401077,
+      "decode_ms": 35.12688697082922
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 3,
+      "bytes": 32279,
+      "pixels": 393216,
+      "bpp": 0.6567179361979166,
+      "psnr": 29.046926498413086,
+      "encode_ms": 77.83555699279532,
+      "decode_ms": 50.04930298309773
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 3,
+      "bytes": 18706,
+      "pixels": 393216,
+      "bpp": 0.3805745442708333,
+      "psnr": 32.60099649429321,
+      "encode_ms": 87.49291102867573,
+      "decode_ms": 43.48995198961347
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 3,
+      "bytes": 16672,
+      "pixels": 393216,
+      "bpp": 0.3391927083333333,
+      "psnr": 34.79123592376709,
+      "encode_ms": 82.6781329815276,
+      "decode_ms": 52.77134996140376
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 3,
+      "bytes": 21566,
+      "pixels": 393216,
+      "bpp": 0.4387613932291667,
+      "psnr": 32.94633626937866,
+      "encode_ms": 99.04269000981003,
+      "decode_ms": 43.41857699910179
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 3,
+      "bytes": 37994,
+      "pixels": 393216,
+      "bpp": 0.7729899088541666,
+      "psnr": 29.322118759155273,
+      "encode_ms": 91.6311230394058,
+      "decode_ms": 61.37122301151976
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 3,
+      "bytes": 25478,
+      "pixels": 393216,
+      "bpp": 0.5183512369791666,
+      "psnr": 30.44715166091919,
+      "encode_ms": 98.69336994597688,
+      "decode_ms": 56.59740400733426
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 3,
+      "bytes": 20192,
+      "pixels": 393216,
+      "bpp": 0.4108072916666667,
+      "psnr": 33.942809104919434,
+      "encode_ms": 76.90114300930873,
+      "decode_ms": 45.85091205080971
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 3,
+      "bytes": 35893,
+      "pixels": 393216,
+      "bpp": 0.7302449544270834,
+      "psnr": 28.454034328460693,
+      "encode_ms": 87.41934201680124,
+      "decode_ms": 42.20471199369058
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 3,
+      "bytes": 15770,
+      "pixels": 393216,
+      "bpp": 0.3208414713541667,
+      "psnr": 34.00120973587036,
+      "encode_ms": 98.0585030047223,
+      "decode_ms": 48.198934993706644
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 3,
+      "bytes": 19781,
+      "pixels": 393216,
+      "bpp": 0.4024454752604167,
+      "psnr": 34.13987874984741,
+      "encode_ms": 110.67764303879812,
+      "decode_ms": 42.46184398652986
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 3,
+      "bytes": 23426,
+      "pixels": 393216,
+      "bpp": 0.4766031901041667,
+      "psnr": 31.061158180236816,
+      "encode_ms": 131.74716098001227,
+      "decode_ms": 59.37691102735698
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 3,
+      "bytes": 18052,
+      "pixels": 393216,
+      "bpp": 0.3672688802083333,
+      "psnr": 33.93702745437622,
+      "encode_ms": 141.35572098894045,
+      "decode_ms": 76.26407803036273
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 3,
+      "bytes": 41811,
+      "pixels": 393216,
+      "bpp": 0.85064697265625,
+      "psnr": 27.082645893096924,
+      "encode_ms": 92.3875619773753,
+      "decode_ms": 43.552544026169926
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 3,
+      "bytes": 33663,
+      "pixels": 393216,
+      "bpp": 0.68487548828125,
+      "psnr": 30.463979244232178,
+      "encode_ms": 91.2181029561907,
+      "decode_ms": 44.16943900287151
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 3,
+      "bytes": 18145,
+      "pixels": 393216,
+      "bpp": 0.3691609700520833,
+      "psnr": 32.53981351852417,
+      "encode_ms": 80.87992999935523,
+      "decode_ms": 37.40756801562384
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 3,
+      "bytes": 19097,
+      "pixels": 393216,
+      "bpp": 0.3885294596354167,
+      "psnr": 32.6476788520813,
+      "encode_ms": 97.04554901691154,
+      "decode_ms": 48.79291704855859
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 3,
+      "bytes": 20910,
+      "pixels": 393216,
+      "bpp": 0.4254150390625,
+      "psnr": 33.399817943573,
+      "encode_ms": 69.84541699057445,
+      "decode_ms": 37.142120010685176
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 3,
+      "bytes": 30512,
+      "pixels": 393216,
+      "bpp": 0.6207682291666666,
+      "psnr": 29.72740888595581,
+      "encode_ms": 114.61785400751978,
+      "decode_ms": 73.37017799727619
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 3,
+      "bytes": 21198,
+      "pixels": 393216,
+      "bpp": 0.4312744140625,
+      "psnr": 31.370601654052734,
+      "encode_ms": 102.51603001961485,
+      "decode_ms": 49.35101798037067
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 3,
+      "bytes": 15488,
+      "pixels": 393216,
+      "bpp": 0.3151041666666667,
+      "psnr": 33.150479793548584,
+      "encode_ms": 68.10232799034566,
+      "decode_ms": 27.305841038469225
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 3,
+      "bytes": 23193,
+      "pixels": 393216,
+      "bpp": 0.47186279296875,
+      "psnr": 30.802907943725586,
+      "encode_ms": 91.9592590071261,
+      "decode_ms": 69.76099597522989
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 3,
+      "bytes": 24745,
+      "pixels": 393216,
+      "bpp": 0.5034383138020834,
+      "psnr": 31.11013412475586,
+      "encode_ms": 92.6357590360567,
+      "decode_ms": 31.74299601232633
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 3,
+      "bytes": 14326,
+      "pixels": 393216,
+      "bpp": 0.2914632161458333,
+      "psnr": 34.9518346786499,
+      "encode_ms": 80.40723501471803,
+      "decode_ms": 41.94503999315202
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 3,
+      "bytes": 32677,
+      "pixels": 393216,
+      "bpp": 0.6648152669270834,
+      "psnr": 29.7552227973938,
+      "encode_ms": 62.46816000202671,
+      "decode_ms": 28.184237016830593
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 4,
+      "bytes": 38620,
+      "pixels": 393216,
+      "bpp": 0.7857259114583334,
+      "psnr": 29.968369007110596,
+      "encode_ms": 77.11608399404213,
+      "decode_ms": 43.13659103354439
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 4,
+      "bytes": 23286,
+      "pixels": 393216,
+      "bpp": 0.4737548828125,
+      "psnr": 33.384695053100586,
+      "encode_ms": 129.37457603402436,
+      "decode_ms": 96.12833999563009
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 4,
+      "bytes": 19601,
+      "pixels": 393216,
+      "bpp": 0.3987833658854167,
+      "psnr": 35.52177429199219,
+      "encode_ms": 96.7523250146769,
+      "decode_ms": 36.831610021181405
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 4,
+      "bytes": 25932,
+      "pixels": 393216,
+      "bpp": 0.527587890625,
+      "psnr": 33.69865417480469,
+      "encode_ms": 98.79546897718683,
+      "decode_ms": 41.97481396840885
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 4,
+      "bytes": 43878,
+      "pixels": 393216,
+      "bpp": 0.8927001953125,
+      "psnr": 30.14535665512085,
+      "encode_ms": 79.06815904425457,
+      "decode_ms": 39.20371597632766
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 4,
+      "bytes": 30780,
+      "pixels": 393216,
+      "bpp": 0.626220703125,
+      "psnr": 31.359941959381104,
+      "encode_ms": 101.89340601209551,
+      "decode_ms": 38.6353709618561
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 4,
+      "bytes": 23136,
+      "pixels": 393216,
+      "bpp": 0.470703125,
+      "psnr": 34.6233344078064,
+      "encode_ms": 70.05986000876874,
+      "decode_ms": 34.38374400138855
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 4,
+      "bytes": 41966,
+      "pixels": 393216,
+      "bpp": 0.8538004557291666,
+      "psnr": 29.235897064208984,
+      "encode_ms": 105.87224998744205,
+      "decode_ms": 52.115471044089645
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 4,
+      "bytes": 18497,
+      "pixels": 393216,
+      "bpp": 0.3763224283854167,
+      "psnr": 34.627718925476074,
+      "encode_ms": 99.92076602065936,
+      "decode_ms": 53.18095302209258
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 4,
+      "bytes": 22923,
+      "pixels": 393216,
+      "bpp": 0.46636962890625,
+      "psnr": 34.724507331848145,
+      "encode_ms": 96.99943498708308,
+      "decode_ms": 53.992039000149816
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 4,
+      "bytes": 28180,
+      "pixels": 393216,
+      "bpp": 0.5733235677083334,
+      "psnr": 31.903867721557617,
+      "encode_ms": 110.61256501125172,
+      "decode_ms": 51.58903601113707
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 4,
+      "bytes": 21637,
+      "pixels": 393216,
+      "bpp": 0.4402058919270833,
+      "psnr": 34.71403121948242,
+      "encode_ms": 73.77523503964767,
+      "decode_ms": 41.99741897173226
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 4,
+      "bytes": 49763,
+      "pixels": 393216,
+      "bpp": 1.0124308268229167,
+      "psnr": 27.970712184906006,
+      "encode_ms": 58.209103997796774,
+      "decode_ms": 32.688362000044435
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 4,
+      "bytes": 40244,
+      "pixels": 393216,
+      "bpp": 0.8187662760416666,
+      "psnr": 31.344707012176514,
+      "encode_ms": 71.39912701677531,
+      "decode_ms": 47.23285196814686
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 4,
+      "bytes": 21836,
+      "pixels": 393216,
+      "bpp": 0.4442545572916667,
+      "psnr": 33.299853801727295,
+      "encode_ms": 129.65699803316966,
+      "decode_ms": 64.65887499507517
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 4,
+      "bytes": 23400,
+      "pixels": 393216,
+      "bpp": 0.47607421875,
+      "psnr": 33.56475114822388,
+      "encode_ms": 124.27139200735837,
+      "decode_ms": 60.64255902310833
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 4,
+      "bytes": 24717,
+      "pixels": 393216,
+      "bpp": 0.50286865234375,
+      "psnr": 34.103944301605225,
+      "encode_ms": 132.22965999739245,
+      "decode_ms": 69.87291196128353
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 4,
+      "bytes": 35799,
+      "pixels": 393216,
+      "bpp": 0.72833251953125,
+      "psnr": 30.450022220611572,
+      "encode_ms": 139.22926597297192,
+      "decode_ms": 72.30893505038694
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 4,
+      "bytes": 26040,
+      "pixels": 393216,
+      "bpp": 0.52978515625,
+      "psnr": 32.271177768707275,
+      "encode_ms": 129.39475796883926,
+      "decode_ms": 80.5105259642005
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 4,
+      "bytes": 18293,
+      "pixels": 393216,
+      "bpp": 0.3721720377604167,
+      "psnr": 33.879687786102295,
+      "encode_ms": 133.4534540073946,
+      "decode_ms": 57.80253803823143
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 4,
+      "bytes": 27458,
+      "pixels": 393216,
+      "bpp": 0.5586344401041666,
+      "psnr": 31.596713066101074,
+      "encode_ms": 137.69669801695272,
+      "decode_ms": 94.41079595126212
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 4,
+      "bytes": 29687,
+      "pixels": 393216,
+      "bpp": 0.6039835611979166,
+      "psnr": 31.923611164093018,
+      "encode_ms": 112.80681699281558,
+      "decode_ms": 64.66560496482998
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 4,
+      "bytes": 16718,
+      "pixels": 393216,
+      "bpp": 0.3401285807291667,
+      "psnr": 35.493364334106445,
+      "encode_ms": 72.5318570039235,
+      "decode_ms": 26.65363601408899
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 4,
+      "bytes": 38643,
+      "pixels": 393216,
+      "bpp": 0.78619384765625,
+      "psnr": 30.530428886413574,
+      "encode_ms": 73.00483697326854,
+      "decode_ms": 36.18984203785658
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 5,
+      "bytes": 45779,
+      "pixels": 393216,
+      "bpp": 0.9313761393229166,
+      "psnr": 30.869317054748535,
+      "encode_ms": 76.3955430011265,
+      "decode_ms": 37.056896020658314
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 5,
+      "bytes": 28561,
+      "pixels": 393216,
+      "bpp": 0.5810750325520834,
+      "psnr": 34.185593128204346,
+      "encode_ms": 88.86990696191788,
+      "decode_ms": 48.87934500584379
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 5,
+      "bytes": 22878,
+      "pixels": 393216,
+      "bpp": 0.4654541015625,
+      "psnr": 36.18499279022217,
+      "encode_ms": 89.77125602541491,
+      "decode_ms": 55.24552799761295
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 5,
+      "bytes": 31177,
+      "pixels": 393216,
+      "bpp": 0.6342976888020834,
+      "psnr": 34.5141863822937,
+      "encode_ms": 63.67055495502427,
+      "decode_ms": 59.932233998551965
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 5,
+      "bytes": 50385,
+      "pixels": 393216,
+      "bpp": 1.02508544921875,
+      "psnr": 30.955708026885986,
+      "encode_ms": 123.958550975658,
+      "decode_ms": 66.0987920127809
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 5,
+      "bytes": 36889,
+      "pixels": 393216,
+      "bpp": 0.7505086263020834,
+      "psnr": 32.27196216583252,
+      "encode_ms": 100.02324299421161,
+      "decode_ms": 45.52824603160843
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 5,
+      "bytes": 26605,
+      "pixels": 393216,
+      "bpp": 0.5412801106770834,
+      "psnr": 35.33554553985596,
+      "encode_ms": 108.50896302144974,
+      "decode_ms": 59.40305901458487
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 5,
+      "bytes": 48781,
+      "pixels": 393216,
+      "bpp": 0.9924519856770834,
+      "psnr": 30.010032653808594,
+      "encode_ms": 97.41528698941693,
+      "decode_ms": 54.93352503981441
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 5,
+      "bytes": 21895,
+      "pixels": 393216,
+      "bpp": 0.4454549153645833,
+      "psnr": 35.2680778503418,
+      "encode_ms": 80.33447799971327,
+      "decode_ms": 39.03846099274233
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 5,
+      "bytes": 26601,
+      "pixels": 393216,
+      "bpp": 0.54119873046875,
+      "psnr": 35.31003952026367,
+      "encode_ms": 95.80000001005828,
+      "decode_ms": 61.87282199971378
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 5,
+      "bytes": 34104,
+      "pixels": 393216,
+      "bpp": 0.69384765625,
+      "psnr": 32.807655334472656,
+      "encode_ms": 87.05913997255266,
+      "decode_ms": 67.69250001525506
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 5,
+      "bytes": 26017,
+      "pixels": 393216,
+      "bpp": 0.5293172200520834,
+      "psnr": 35.51232576370239,
+      "encode_ms": 66.5755809750408,
+      "decode_ms": 32.06164197763428
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 5,
+      "bytes": 58681,
+      "pixels": 393216,
+      "bpp": 1.1938680013020833,
+      "psnr": 28.820691108703613,
+      "encode_ms": 105.80874601146206,
+      "decode_ms": 44.8605950223282
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 5,
+      "bytes": 47209,
+      "pixels": 393216,
+      "bpp": 0.9604695638020834,
+      "psnr": 32.174479961395264,
+      "encode_ms": 96.96360101224855,
+      "decode_ms": 83.87906901771203
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 5,
+      "bytes": 26230,
+      "pixels": 393216,
+      "bpp": 0.5336507161458334,
+      "psnr": 34.0193772315979,
+      "encode_ms": 150.99929698044434,
+      "decode_ms": 69.65967401629314
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 5,
+      "bytes": 28630,
+      "pixels": 393216,
+      "bpp": 0.5824788411458334,
+      "psnr": 34.529550075531006,
+      "encode_ms": 121.4626949513331,
+      "decode_ms": 70.81049802945927
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 5,
+      "bytes": 29054,
+      "pixels": 393216,
+      "bpp": 0.5911051432291666,
+      "psnr": 34.79118585586548,
+      "encode_ms": 127.70183198153973,
+      "decode_ms": 53.4584479755722
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 5,
+      "bytes": 42015,
+      "pixels": 393216,
+      "bpp": 0.85479736328125,
+      "psnr": 31.214449405670166,
+      "encode_ms": 132.5890320003964,
+      "decode_ms": 49.66700100339949
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 5,
+      "bytes": 31404,
+      "pixels": 393216,
+      "bpp": 0.638916015625,
+      "psnr": 33.1169319152832,
+      "encode_ms": 98.09394500916824,
+      "decode_ms": 36.54822299722582
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 5,
+      "bytes": 21601,
+      "pixels": 393216,
+      "bpp": 0.4394734700520833,
+      "psnr": 34.596781730651855,
+      "encode_ms": 94.26030796021223,
+      "decode_ms": 37.146113987546414
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 5,
+      "bytes": 32525,
+      "pixels": 393216,
+      "bpp": 0.6617228190104166,
+      "psnr": 32.42881774902344,
+      "encode_ms": 65.59830001788214,
+      "decode_ms": 29.229206033051014
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 5,
+      "bytes": 35576,
+      "pixels": 393216,
+      "bpp": 0.7237955729166666,
+      "psnr": 32.789974212646484,
+      "encode_ms": 58.73909103684127,
+      "decode_ms": 27.505307050887495
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 5,
+      "bytes": 19516,
+      "pixels": 393216,
+      "bpp": 0.3970540364583333,
+      "psnr": 36.08388423919678,
+      "encode_ms": 57.77092697098851,
+      "decode_ms": 24.552266986574978
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 5,
+      "bytes": 44795,
+      "pixels": 393216,
+      "bpp": 0.9113566080729166,
+      "psnr": 31.22542381286621,
+      "encode_ms": 61.42228003591299,
+      "decode_ms": 30.10491596069187
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 6,
+      "bytes": 53667,
+      "pixels": 393216,
+      "bpp": 1.09185791015625,
+      "psnr": 31.76403284072876,
+      "encode_ms": 63.298118009697646,
+      "decode_ms": 32.43812499567866
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 6,
+      "bytes": 34850,
+      "pixels": 393216,
+      "bpp": 0.7090250651041666,
+      "psnr": 34.976232051849365,
+      "encode_ms": 71.67581398971379,
+      "decode_ms": 32.972336979582906
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 6,
+      "bytes": 26615,
+      "pixels": 393216,
+      "bpp": 0.5414835611979166,
+      "psnr": 36.803603172302246,
+      "encode_ms": 69.98957798350602,
+      "decode_ms": 51.34980694856495
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 6,
+      "bytes": 37400,
+      "pixels": 393216,
+      "bpp": 0.7609049479166666,
+      "psnr": 35.255911350250244,
+      "encode_ms": 82.08530797855929,
+      "decode_ms": 41.61482903873548
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 6,
+      "bytes": 57375,
+      "pixels": 393216,
+      "bpp": 1.16729736328125,
+      "psnr": 31.729776859283447,
+      "encode_ms": 101.00797796621919,
+      "decode_ms": 53.34712500916794
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 6,
+      "bytes": 43545,
+      "pixels": 393216,
+      "bpp": 0.88592529296875,
+      "psnr": 33.15136432647705,
+      "encode_ms": 81.54033904429525,
+      "decode_ms": 39.21384899877012
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 6,
+      "bytes": 30454,
+      "pixels": 393216,
+      "bpp": 0.6195882161458334,
+      "psnr": 36.03721380233765,
+      "encode_ms": 71.58618100220338,
+      "decode_ms": 36.44947399152443
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 6,
+      "bytes": 56608,
+      "pixels": 393216,
+      "bpp": 1.1516927083333333,
+      "psnr": 30.800843238830566,
+      "encode_ms": 79.275623022113,
+      "decode_ms": 38.22652203962207
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 6,
+      "bytes": 25790,
+      "pixels": 393216,
+      "bpp": 0.5246988932291666,
+      "psnr": 35.86711645126343,
+      "encode_ms": 72.23212503595278,
+      "decode_ms": 35.13355599716306
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 6,
+      "bytes": 31123,
+      "pixels": 393216,
+      "bpp": 0.6331990559895834,
+      "psnr": 35.9149169921875,
+      "encode_ms": 74.8366160551086,
+      "decode_ms": 33.73078297590837
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 6,
+      "bytes": 40797,
+      "pixels": 393216,
+      "bpp": 0.83001708984375,
+      "psnr": 33.66920709609985,
+      "encode_ms": 61.92819494754076,
+      "decode_ms": 30.62499302905053
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 6,
+      "bytes": 31447,
+      "pixels": 393216,
+      "bpp": 0.6397908528645834,
+      "psnr": 36.329495906829834,
+      "encode_ms": 60.241651022806764,
+      "decode_ms": 25.580389017704874
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 6,
+      "bytes": 67954,
+      "pixels": 393216,
+      "bpp": 1.3825276692708333,
+      "psnr": 29.618489742279053,
+      "encode_ms": 91.1965339910239,
+      "decode_ms": 38.58319798018783
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 6,
+      "bytes": 55127,
+      "pixels": 393216,
+      "bpp": 1.1215616861979167,
+      "psnr": 32.99842357635498,
+      "encode_ms": 87.89985795738176,
+      "decode_ms": 40.74639000464231
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 6,
+      "bytes": 31348,
+      "pixels": 393216,
+      "bpp": 0.6377766927083334,
+      "psnr": 34.71848249435425,
+      "encode_ms": 72.13132199831307,
+      "decode_ms": 28.114608023315668
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 6,
+      "bytes": 34351,
+      "pixels": 393216,
+      "bpp": 0.6988728841145834,
+      "psnr": 35.42729139328003,
+      "encode_ms": 62.36129597527906,
+      "decode_ms": 47.61552799027413
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 6,
+      "bytes": 34037,
+      "pixels": 393216,
+      "bpp": 0.6924845377604166,
+      "psnr": 35.46084403991699,
+      "encode_ms": 64.42233402049169,
+      "decode_ms": 29.23814597306773
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 6,
+      "bytes": 49467,
+      "pixels": 393216,
+      "bpp": 1.00640869140625,
+      "psnr": 31.993491649627686,
+      "encode_ms": 61.88144301995635,
+      "decode_ms": 33.94168399972841
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 6,
+      "bytes": 37617,
+      "pixels": 393216,
+      "bpp": 0.76531982421875,
+      "psnr": 33.96606206893921,
+      "encode_ms": 63.269496022257954,
+      "decode_ms": 27.002935006748885
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 6,
+      "bytes": 25910,
+      "pixels": 393216,
+      "bpp": 0.5271402994791666,
+      "psnr": 35.380940437316895,
+      "encode_ms": 60.68328896071762,
+      "decode_ms": 28.56273698853329
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 6,
+      "bytes": 38261,
+      "pixels": 393216,
+      "bpp": 0.7784220377604166,
+      "psnr": 33.23035955429077,
+      "encode_ms": 71.98459299979731,
+      "decode_ms": 28.939832001924515
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 6,
+      "bytes": 42518,
+      "pixels": 393216,
+      "bpp": 0.8650309244791666,
+      "psnr": 33.612380027770996,
+      "encode_ms": 65.38286403520033,
+      "decode_ms": 36.93420597119257
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 6,
+      "bytes": 22813,
+      "pixels": 393216,
+      "bpp": 0.4641316731770833,
+      "psnr": 36.55220031738281,
+      "encode_ms": 91.28169697942212,
+      "decode_ms": 33.68405101355165
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 6,
+      "bytes": 51268,
+      "pixels": 393216,
+      "bpp": 1.0430501302083333,
+      "psnr": 31.831729412078857,
+      "encode_ms": 68.6742159887217,
+      "decode_ms": 29.896961990743876
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim01.png",
+      "qp": 7,
+      "bytes": 61674,
+      "pixels": 393216,
+      "bpp": 1.2547607421875,
+      "psnr": 32.590978145599365,
+      "encode_ms": 71.18545600678772,
+      "decode_ms": 36.09058499569073
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim02.png",
+      "qp": 7,
+      "bytes": 41677,
+      "pixels": 393216,
+      "bpp": 0.8479207356770834,
+      "psnr": 35.740370750427246,
+      "encode_ms": 89.94412195170298,
+      "decode_ms": 31.21933399233967
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim03.png",
+      "qp": 7,
+      "bytes": 31035,
+      "pixels": 393216,
+      "bpp": 0.63140869140625,
+      "psnr": 37.41598129272461,
+      "encode_ms": 68.56033694930375,
+      "decode_ms": 28.502410976216197
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim04.png",
+      "qp": 7,
+      "bytes": 44258,
+      "pixels": 393216,
+      "bpp": 0.9004313151041666,
+      "psnr": 36.00684642791748,
+      "encode_ms": 70.32092899316922,
+      "decode_ms": 35.29226500540972
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim05.png",
+      "qp": 7,
+      "bytes": 64756,
+      "pixels": 393216,
+      "bpp": 1.3174641927083333,
+      "psnr": 32.462332248687744,
+      "encode_ms": 72.88079499267042,
+      "decode_ms": 32.01549896039069
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim06.png",
+      "qp": 7,
+      "bytes": 50380,
+      "pixels": 393216,
+      "bpp": 1.0249837239583333,
+      "psnr": 33.94837141036987,
+      "encode_ms": 79.18378803879023,
+      "decode_ms": 34.56563898362219
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim07.png",
+      "qp": 7,
+      "bytes": 34770,
+      "pixels": 393216,
+      "bpp": 0.7073974609375,
+      "psnr": 36.65494680404663,
+      "encode_ms": 85.63200599746779,
+      "decode_ms": 40.20263999700546
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim08.png",
+      "qp": 7,
+      "bytes": 64729,
+      "pixels": 393216,
+      "bpp": 1.3169148763020833,
+      "psnr": 31.50569200515747,
+      "encode_ms": 87.90962799685076,
+      "decode_ms": 52.46116197668016
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim09.png",
+      "qp": 7,
+      "bytes": 30394,
+      "pixels": 393216,
+      "bpp": 0.6183675130208334,
+      "psnr": 36.40562057495117,
+      "encode_ms": 77.87022599950433,
+      "decode_ms": 76.15153200458735
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim10.png",
+      "qp": 7,
+      "bytes": 36465,
+      "pixels": 393216,
+      "bpp": 0.74188232421875,
+      "psnr": 36.44588232040405,
+      "encode_ms": 57.98568099271506,
+      "decode_ms": 40.950129041448236
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim11.png",
+      "qp": 7,
+      "bytes": 47866,
+      "pixels": 393216,
+      "bpp": 0.9738362630208334,
+      "psnr": 34.45628643035889,
+      "encode_ms": 72.63506500748917,
+      "decode_ms": 41.026149003300816
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim12.png",
+      "qp": 7,
+      "bytes": 37121,
+      "pixels": 393216,
+      "bpp": 0.7552286783854166,
+      "psnr": 37.04910755157471,
+      "encode_ms": 58.11727198306471,
+      "decode_ms": 31.994641001801938
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim13.png",
+      "qp": 7,
+      "bytes": 77463,
+      "pixels": 393216,
+      "bpp": 1.57598876953125,
+      "psnr": 30.293047428131104,
+      "encode_ms": 193.67116101784632,
+      "decode_ms": 75.80300502013415
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim14.png",
+      "qp": 7,
+      "bytes": 63229,
+      "pixels": 393216,
+      "bpp": 1.2863972981770833,
+      "psnr": 33.751840591430664,
+      "encode_ms": 68.42068902915344,
+      "decode_ms": 39.43161899223924
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim15.png",
+      "qp": 7,
+      "bytes": 37218,
+      "pixels": 393216,
+      "bpp": 0.7572021484375,
+      "psnr": 35.44718027114868,
+      "encode_ms": 64.13138296920806,
+      "decode_ms": 31.34501801105216
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim16.png",
+      "qp": 7,
+      "bytes": 40749,
+      "pixels": 393216,
+      "bpp": 0.82904052734375,
+      "psnr": 36.318697929382324,
+      "encode_ms": 62.55061301635578,
+      "decode_ms": 28.495936014223844
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim17.png",
+      "qp": 7,
+      "bytes": 39785,
+      "pixels": 393216,
+      "bpp": 0.8094278971354166,
+      "psnr": 36.12429141998291,
+      "encode_ms": 79.258457000833,
+      "decode_ms": 36.57947794999927
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim18.png",
+      "qp": 7,
+      "bytes": 57314,
+      "pixels": 393216,
+      "bpp": 1.1660563151041667,
+      "psnr": 32.662086486816406,
+      "encode_ms": 83.2436410128139,
+      "decode_ms": 42.28881699964404
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim19.png",
+      "qp": 7,
+      "bytes": 44705,
+      "pixels": 393216,
+      "bpp": 0.9095255533854166,
+      "psnr": 34.748830795288086,
+      "encode_ms": 74.21468402026221,
+      "decode_ms": 63.089167000725865
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim20.png",
+      "qp": 7,
+      "bytes": 30743,
+      "pixels": 393216,
+      "bpp": 0.6254679361979166,
+      "psnr": 36.10084056854248,
+      "encode_ms": 89.10312602529302,
+      "decode_ms": 49.86828495748341
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim21.png",
+      "qp": 7,
+      "bytes": 44715,
+      "pixels": 393216,
+      "bpp": 0.90972900390625,
+      "psnr": 33.95648002624512,
+      "encode_ms": 254.50065999757499,
+      "decode_ms": 89.62313696974888
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim22.png",
+      "qp": 7,
+      "bytes": 50138,
+      "pixels": 393216,
+      "bpp": 1.0200602213541667,
+      "psnr": 34.4133734703064,
+      "encode_ms": 132.3830640176311,
+      "decode_ms": 49.134257016703486
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim23.png",
+      "qp": 7,
+      "bytes": 26500,
+      "pixels": 393216,
+      "bpp": 0.5391438802083334,
+      "psnr": 37.070581912994385,
+      "encode_ms": 74.16738400934264,
+      "decode_ms": 40.050195006188005
+    },
+    {
+      "image": "/home/bigfly/projects/Deep-Image-Compression-ditic/src/images/kodak/kodim24.png",
+      "qp": 7,
+      "bytes": 58604,
+      "pixels": 393216,
+      "bpp": 1.1923014322916667,
+      "psnr": 32.40017890930176,
+      "encode_ms": 85.5776920216158,
+      "decode_ms": 41.64126998512074
+    }
+  ]
+}
