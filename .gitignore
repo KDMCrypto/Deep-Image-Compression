@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.ipynb_checkpoints/
+
+# Model weights and caches (large binaries, downloaded locally)
+src/models/checkpoints/
+src/models/cache/
+
+# Per-image artifacts (bitstreams and reconstructions)
+src/result/kodak/**/bin/
+src/result/kodak/**/rec/
+src/result/baselines/**/encoded/
+
+# Logs
+src/result/logs/
+*.log

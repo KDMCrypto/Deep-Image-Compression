@@ -1,0 +1,40 @@
+# Top-level packages for the DiT-IC experiment.
+#
+# IMPORTANT: the upstream pins are mutually inconsistent:
+#   * compressai 1.2.8 requires numpy<2.0, while DiT-IC lists numpy 2.4.3;
+#   * pyiqa 0.1.14.1 pins transformers==4.37.2, while peft>=0.17 (required by
+#     diffusers 0.35.2) needs a newer transformers;
+#   * xformers 0.0.35 is built for torch 2.10 and is not used by inference.
+#
+# Therefore this file documents the working set, but the exact reproducible
+# environment lives in `src/requirements-lock.txt` and is installed by
+# `src/scripts/setup_env.ps1` (PyTorch first, then the lock with --no-deps).
+
+accelerate==1.1.0
+compressai==1.2.8
+diffusers==0.35.2
+einops==0.8.2
+lpips==0.1.4
+numpy==1.26.4
+openai_clip==1.0.1
+peft==0.17.1
+Pillow==12.1.1
+pyiqa==0.1.14.1
+PyYAML==6.0.3
+setuptools==78.1.0
+taming_transformers==0.0.1
+timm==1.0.25
+tokenizers==0.22.1
+torch_fidelity==0.3.0
+torchmetrics==1.8.2
+tqdm==4.67.1
+transformers==4.57.1
+
+# Notebook / analysis tooling
+jupyterlab==4.4.6
+nbconvert==7.16.6
+nbformat==5.10.4
+ipykernel==6.30.1
+pandas==2.3.3
+matplotlib==3.10.7
+seaborn==0.13.2
