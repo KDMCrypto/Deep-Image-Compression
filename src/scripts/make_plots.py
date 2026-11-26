@@ -1,5 +1,8 @@
 """Build rate-distortion plots and a matched-BPP table for DiT-IC vs JPEG/WebP.
 
+Every DiT-IC level with a summary (src/result/metrics/dit_ic_q*_summary.json) is drawn
+as one curve; the matched-BPP table and bars use the highest level found (q4 = about 0.1 bpp).
+
 When src/result/metrics/pulse_kodak_summary.csv exists (src/scripts/run_pulse.py),
 the four PULSE models are added to the rate-distortion plots as QP curves.
 When src/result/metrics/hyperprior_kodak_summary.csv exists
@@ -82,12 +85,17 @@ def pareto_curve(rows: list[dict], metric: str, higher_is_better: bool) -> tuple
 def main() -> None:
     FIGURES_DIR.mkdir(parents=True, exist_ok=True)
 
-    with (METRICS_DIR / "dit_ic_q3_summary.json").open("r", encoding="utf-8") as f:
-        dit_summary = json.load(f)
+    # All measured DiT-IC levels, ordered by bitrate; the highest one is matched against JPEG/WebP
+    dit_levels = []
+    for path in sorted(METRICS_DIR.glob("dit_ic_q*_summary.json")):
+        with path.open("r", encoding="utf-8") as f:
+            summary = json.load(f)
+        dit_levels.append((summary["tag"], {key[4:]: summary[key] for key in summary if key.startswith("avg_")}))
+    dit_levels.sort(key=lambda level: level[1]["bpp"])
+    dit_tag, dit_metrics = dit_levels[-1]
+    dit_bpp = dit_metrics["bpp"]
+    dit_label = dit_tag.replace("dit_ic_", "DiT-IC ")
     baseline_rows = read_csv(METRICS_DIR / "baselines_kodak_summary.csv")
-
-    dit_bpp = dit_summary["avg_bpp"]
-    dit_metrics = {key[4:]: dit_summary[key] for key in dit_summary if key.startswith("avg_")}
 
     codec_rows = {
         codec: [r for r in baseline_rows if r["codec"] == codec]
@@ -140,14 +148,15 @@ def main() -> None:
                 markersize=4,
                 **HYPERPRIOR_STYLES[codec],
             )
-        ax.scatter(
-            [dit_bpp],
-            [dit_metrics[metric]],
+        ax.plot(
+            [level[1]["bpp"] for level in dit_levels],
+            [level[1][metric] for level in dit_levels],
             color="#7570b3",
             marker="*",
-            s=220,
+            markersize=12,
+            linewidth=1.4,
             zorder=5,
-            label="DiT-IC q3",
+            label="DiT-IC " + "-".join(tag.replace("dit_ic_", "") for tag, _ in (dit_levels[0], dit_levels[-1])),
         )
         ax.set_xlabel("BPP")
         ax.set_ylabel(label)
@@ -183,7 +192,7 @@ def main() -> None:
             row[metric] = float(np.interp(dit_bpp, bpp, values))
         matched_rows.append(row)
 
-    dit_row = {"codec": "dit_ic_q3", "bpp": dit_bpp, **{m: dit_metrics[m] for m in METRIC_LABELS}}
+    dit_row = {"codec": dit_tag, "bpp": dit_bpp, **{m: dit_metrics[m] for m in METRIC_LABELS}}
     matched_rows.append(dit_row)
     matched_rows.sort(key=lambda r: r["codec"])
 
@@ -196,9 +205,9 @@ def main() -> None:
     # ---- Bar chart at matched BPP ---------------------------------------
     fig, axes = plt.subplots(1, 3, figsize=(13, 4))
     bar_metrics = ["psnr", "lpips", "dists"]
-    order = ["dit_ic_q3", "jpeg", "webp"]
-    colors = {"dit_ic_q3": "#7570b3", "jpeg": "#d95f02", "webp": "#1b9e77"}
-    labels = {"dit_ic_q3": "DiT-IC q3", "jpeg": "JPEG", "webp": "WebP"}
+    order = [dit_tag, "jpeg", "webp"]
+    colors = {dit_tag: "#7570b3", "jpeg": "#d95f02", "webp": "#1b9e77"}
+    labels = {dit_tag: dit_label, "jpeg": "JPEG", "webp": "WebP"}
     rows_by_codec = {r["codec"]: r for r in matched_rows}
     for ax, metric in zip(axes, bar_metrics):
         values = [rows_by_codec[c][metric] for c in order]
@@ -212,7 +221,7 @@ def main() -> None:
     fig.savefig(FIGURES_DIR / "matched_bpp_bars.png", dpi=160)
     plt.close(fig)
 
-    print(f"DiT-IC q3: {dit_bpp:.4f} bpp")
+    print(f"{dit_label}: {dit_bpp:.4f} bpp (levels: {len(dit_levels)})")
     print(f"Saved figures to {FIGURES_DIR}")
     print(f"Saved {matched_path}")
 
