@@ -1,0 +1,23 @@
+{
+  "tag": "dit_ic_q4",
+  "checkpoint": "D:\\\u0423\u0447\u0435\u0431\u0430\\CV-labs\\Deep-Image-Compression\\src\\models\\checkpoints\\q4_merge_ema.pt",
+  "images": 24,
+  "parameters_b": 1.069411211,
+  "load_time_s": 8.320569599978626,
+  "gpu": "NVIDIA GeForce RTX 5060 Ti",
+  "torch": "2.8.0+cu128",
+  "cuda": "12.8",
+  "peak_vram_gb": 6.072587264,
+  "avg_bpp": 0.10019599066840278,
+  "avg_psnr": 24.57314395904541,
+  "avg_ms_ssim": 0.8792757446073699,
+  "avg_lpips": 0.08644114263976614,
+  "avg_dists": 0.050291659931341805,
+  "avg_clipiqa": 0.7364686032136282,
+  "avg_musiq": 74.52077166239421,
+  "avg_encode_ms": 401.21368328497437,
+  "avg_decode_ms": 461.62115000576404,
+  "avg_bytes": 4924.833333333333,
+  "median_encode_ms": 270.3450499102473,
+  "median_decode_ms": 386.74480002373457
+}
