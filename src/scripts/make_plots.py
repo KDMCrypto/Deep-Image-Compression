@@ -2,6 +2,8 @@
 
 When src/result/metrics/pulse_kodak_summary.csv exists (src/scripts/run_pulse.py),
 the four PULSE models are added to the rate-distortion plots as QP curves.
+When src/result/metrics/hyperprior_kodak_summary.csv exists
+(src/scripts/run_hyperprior.py), the scale-hyperprior curves are added too.
 """
 
 from __future__ import annotations
@@ -47,6 +49,14 @@ PULSE_STYLES = {
     "pulse-l-perceptual": dict(color="#6a3d9a", marker="P", label="PULSE-L perceptual"),
 }
 PULSE_SUMMARY = METRICS_DIR / "pulse_kodak_summary.csv"
+
+# Scale hyperprior from src/scripts/run_hyperprior.py: trained by us, and the
+# official CompressAI weights of the same architecture as a reference.
+HYPERPRIOR_STYLES = {
+    "hyperprior-ours": dict(color="#000000", marker="o", linestyle="-", label="Hyperprior (ours)"),
+    "hyperprior-zoo": dict(color="#999999", marker="o", linestyle=":", label="Hyperprior (CompressAI)"),
+}
+HYPERPRIOR_SUMMARY = METRICS_DIR / "hyperprior_kodak_summary.csv"
 
 
 def read_csv(path: Path) -> list[dict]:
@@ -95,6 +105,16 @@ def main() -> None:
         pulse_rows = {model: rows for model, rows in pulse_rows.items() if rows}
     pulse_min_bpp = min((float(r["bpp"]) for rows in pulse_rows.values() for r in rows), default=0.0)
 
+    # Hyperprior is optional as well; one curve per codec, points ordered by lambda.
+    hyperprior_rows = {}
+    if HYPERPRIOR_SUMMARY.exists():
+        all_hyperprior = read_csv(HYPERPRIOR_SUMMARY)
+        hyperprior_rows = {
+            codec: sorted((r for r in all_hyperprior if r["codec"] == codec), key=lambda r: float(r["lmbda"]))
+            for codec in HYPERPRIOR_STYLES
+        }
+        hyperprior_rows = {codec: rows for codec, rows in hyperprior_rows.items() if rows}
+
     # ---- Rate-distortion plots -------------------------------------------
     for metric, (label, higher_is_better) in METRIC_LABELS.items():
         fig, ax = plt.subplots(figsize=(6.4, 4.4))
@@ -112,6 +132,14 @@ def main() -> None:
                 markersize=4,
                 **PULSE_STYLES[model],
             )
+        for codec, rows in hyperprior_rows.items():
+            ax.plot(
+                [float(r["bpp"]) for r in rows],
+                [float(r[metric]) for r in rows],
+                linewidth=1.6,
+                markersize=4,
+                **HYPERPRIOR_STYLES[codec],
+            )
         ax.scatter(
             [dit_bpp],
             [dit_metrics[metric]],
@@ -125,7 +153,7 @@ def main() -> None:
         ax.set_ylabel(label)
         ax.set_xscale("log")
         ax.grid(True, alpha=0.3)
-        ax.legend(fontsize=7 if pulse_rows else None)
+        ax.legend(fontsize=7 if (pulse_rows or hyperprior_rows) else None)
         ax.set_title(f"Kodak: {label} vs bitrate")
         if pulse_rows:
             # The two kinds of curves are built differently; say so on the figure.
