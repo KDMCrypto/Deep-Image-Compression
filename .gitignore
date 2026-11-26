@@ -19,3 +19,10 @@ src/result/logs/
 
 # PULSE reconstructions (one PNG per image, model and QP)
 src/result/pulse/**/rec/
+
+# Hyperprior: reconstructions and model weights (large binaries)
+src/result/hyperprior/rec/
+src/result/hyperprior/kaggle/**/*.pth
+# Short feasibility run and raw Kaggle job logs
+src/result/hyperprior/kaggle/probe/
+src/result/hyperprior/kaggle/**/*.log
