@@ -26,3 +26,6 @@ src/result/hyperprior/kaggle/**/*.pth
 # Short feasibility run and raw Kaggle job logs
 src/result/hyperprior/kaggle/probe/
 src/result/hyperprior/kaggle/**/*.log
+
+# DIV2K: local copy for the dataset analysis only (download from Kaggle)
+src/images/div2k/
