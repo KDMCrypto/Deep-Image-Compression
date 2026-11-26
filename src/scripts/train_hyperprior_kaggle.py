@@ -19,8 +19,14 @@ resolution and at half resolution (half of the crops come from each, so the
 model also sees the coarser detail scale of 768x512 test photos). Random
 256x256 crops with horizontal flips. Kodak is never used here.
 
+Experiment with the crop source (--crop-sources): one entry per GPU, "full+half"
+(the default recipe above) or "full" (crops from full-resolution images only).
+With the same lambda on both GPUs, one job compares the two recipes under the
+same steps, seed and time; the choice is then made on DIV2K validation images.
+
 Outputs (QUOTA_RUN_OUTPUT_DIR, downloaded to the PC after the job):
-    hyperprior_lmbda<value>.pth   model weights (saved every --save-minutes and at the end)
+    hyperprior_lmbda<value>.pth   model weights (saved every --save-minutes and at the end);
+                                  hyperprior_lmbda<value>_full.pth for a "full" crop-source run
     train_log.csv                 loss, mse, bpp per lambda over time
     run_info.json                 settings, speed, GPU, versions, round-trip check
 """
@@ -67,6 +73,8 @@ OUTPUT_DIR = Path(os.environ.get("QUOTA_RUN_OUTPUT_DIR", "output"))
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--lambdas", default="0.0018,0.0035", help="one lambda per GPU")
+    parser.add_argument("--crop-sources", default="",
+                        help='one per GPU: "full+half" (default) or "full" (no half-size copies)')
     parser.add_argument("--train-hours", type=float, default=9.0, help="training time budget per run")
     parser.add_argument("--batch", type=int, default=16)
     parser.add_argument("--crop", type=int, default=256)
@@ -122,9 +130,10 @@ class RandomCropSampler:
 class Run:
     """One lambda: its model, optimizers and running statistics, on its own GPU."""
 
-    def __init__(self, lmbda: float, device: torch.device, lr: float):
+    def __init__(self, lmbda: float, device: torch.device, lr: float, crop_source: str = "full+half"):
         self.lmbda = lmbda
         self.device = device
+        self.crop_source = crop_source
         # quality=1 only selects N=128, M=192; the weights start random (pretrained=False).
         self.model = bmshj2018_hyperprior(quality=1, metric="mse", pretrained=False).to(device).train()
         main_params = [p for n, p in self.model.named_parameters() if not n.endswith(".quantiles")]
@@ -170,7 +179,8 @@ class Run:
         return values
 
     def checkpoint_path(self) -> Path:
-        return OUTPUT_DIR / f"hyperprior_lmbda{self.lmbda}.pth"
+        suffix = "" if self.crop_source == "full+half" else "_" + self.crop_source.replace("+", "_")
+        return OUTPUT_DIR / f"hyperprior_lmbda{self.lmbda}{suffix}.pth"
 
     def save(self) -> None:
         torch.save(self.model.state_dict(), self.checkpoint_path())
@@ -212,24 +222,31 @@ def main() -> None:
     images = [im for pair in pairs for im in pair]
     load_seconds = time.time() - t0
     print(f"loaded {len(paths)} DIV2K images (+ half-size copies) in {load_seconds:.0f} s", flush=True)
-    sampler = RandomCropSampler(images, args.crop, args.seed)
 
-    runs = [Run(l, torch.device(f"cuda:{i}"), args.lr) for i, l in enumerate(lambdas)]
+    # Crop source per GPU: full and half-size images, or full-size images only
+    sources = args.crop_sources.split(",") if args.crop_sources else ["full+half"] * len(lambdas)
+    if len(sources) != len(lambdas) or any(s not in ("full+half", "full") for s in sources):
+        raise SystemExit(f"--crop-sources needs one of full+half/full per lambda, got {sources}")
+    source_images = {"full+half": images, "full": [pair[0] for pair in pairs]}
+    # Same seed for every sampler: the runs differ only in the images they crop from
+    samplers = {s: RandomCropSampler(source_images[s], args.crop, args.seed) for s in set(sources)}
+
+    runs = [Run(l, torch.device(f"cuda:{i}"), args.lr, sources[i]) for i, l in enumerate(lambdas)]
     params = sum(p.numel() for p in runs[0].model.parameters())
 
     log_path = OUTPUT_DIR / "train_log.csv"
     with log_path.open("w", newline="") as f:
-        csv.writer(f).writerow(["elapsed_min", "step", "lambda", "loss", "mse", "psnr", "bpp", "lr"])
+        csv.writer(f).writerow(["elapsed_min", "step", "lambda", "loss", "mse", "psnr", "bpp", "lr", "crop_source"])
 
     budget_s = args.train_hours * 3600
     start = last_save = time.time()
     lr_dropped = False
     step = 0
     while time.time() - start < budget_s:
-        batch = sampler.batch(args.batch)
+        batches = {s: sampler.batch(args.batch) for s, sampler in samplers.items()}
         # Both GPUs work at the same time: kernel launches are asynchronous.
         for run in runs:
-            run.step(batch)
+            run.step(batches[run.crop_source])
         step += 1
 
         elapsed = time.time() - start
@@ -245,9 +262,10 @@ def main() -> None:
                 for run in runs:
                     w = run.read_window()
                     lr = run.optimizer.param_groups[0]["lr"]
-                    writer.writerow([f"{elapsed / 60:.1f}", step, run.lmbda, w["loss"], w["mse"], w["psnr"], w["bpp"], lr])
+                    writer.writerow([f"{elapsed / 60:.1f}", step, run.lmbda, w["loss"], w["mse"], w["psnr"], w["bpp"], lr,
+                                     run.crop_source])
                     print(
-                        f"{elapsed / 60:6.1f} min step {step:7d} lambda {run.lmbda}: "
+                        f"{elapsed / 60:6.1f} min step {step:7d} lambda {run.lmbda} ({run.crop_source}): "
                         f"loss {w['loss']:.4f} psnr {w['psnr']:.2f} bpp {w['bpp']:.4f} "
                         f"({step / elapsed:.2f} steps/s)",
                         flush=True,
@@ -261,6 +279,7 @@ def main() -> None:
     total_s = time.time() - start
     info = {
         "lambdas": lambdas,
+        "crop_sources": sources,
         "steps": step,
         "train_seconds": total_s,
         "steps_per_second": step / total_s,
@@ -280,7 +299,7 @@ def main() -> None:
     check_image = images[0][:512, :768]
     for run in runs:
         run.save()
-        info["round_trip"][str(run.lmbda)] = run.round_trip(check_image)
+        info["round_trip"][f"{run.lmbda} {run.crop_source}"] = run.round_trip(check_image)
     (OUTPUT_DIR / "run_info.json").write_text(json.dumps(info, indent=2))
     print(json.dumps(info, indent=2), flush=True)
 
